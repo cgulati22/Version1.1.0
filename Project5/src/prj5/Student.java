@@ -13,13 +13,16 @@ public class Student
     private Major major;
     private Hobby hobby;
     private State state;
-    FileReader reader;
-    //need something store info
+    //private FileReader reader;
+    //private Student[] students;
     
-    public Student() 
+    public Student(Major m, Hobby h, State s) 
     {
-        reader = new FileReader;
-        //something = reader.readStudentFiles;
+        //reader = new FileReader();
+        //student = reader.readStudentFiles();
+        this.major = m;
+        this.hobby = h;
+        this.state = s;
         attributes[0] = major.toString();
         attributes[1] = hobby.toString();
         attributes[2] = state.toString();
