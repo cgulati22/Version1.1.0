@@ -12,10 +12,12 @@ import java.util.NoSuchElementException;
  * @version 10/30/15
  * @author maellis1
  * @version 11/1/15
+ * @author Chirag Gulati(cgulati)
+ * @version 11/18/19
  * @param <E>
  *            The type of object the class will store
  */
-public class DoubleLinkedList<E> implements ListInterface {
+public class DoubleLinkedList<E> implements ListInterface<E> {
 
     /**
      * This represents a node in a doubly linked list. This node stores data, a
@@ -26,6 +28,7 @@ public class DoubleLinkedList<E> implements ListInterface {
      *            This is the type of object that this class will store
      * @author Mark Wiggans (mmw125)
      * @version 4/14/2015
+     * @author Chirag Gulati (cgulati)
      */
     private static class Node<E> {
         private Node<E> next;
