@@ -21,7 +21,7 @@ public class Song
     private CompareState compareState;
     private FileReader reader;
     
-    public Song()
+    public Song(String artist, String songTitile)
     {
         
     }
