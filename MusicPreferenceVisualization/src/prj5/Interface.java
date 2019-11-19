@@ -1,6 +1,6 @@
-package Musis_Preference_Visualization;
+package prj5;
 
-public interface ListInterface<T> {
+public interface Interface<T> {
 
 
     public T get(int index);

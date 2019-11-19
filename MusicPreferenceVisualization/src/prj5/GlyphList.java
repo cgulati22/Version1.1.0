@@ -1,9 +1,10 @@
-package Musis_Preference_Visualization;
+package prj5;
 
 public class GlyphList {
     private Glyph[] glyphList;  
     private Song[] songs;
-    public GlyphList(Song[] s) {
+    
+    public GlyphList(Song[] songs) {
         for(int i = 0 ;i < s.length; i++) {
             glyphList = new Glyph[s.length];
             songs =s;

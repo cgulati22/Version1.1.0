@@ -1,11 +1,6 @@
-package Musis_Preference_Visualization;
+package prj5;
 
-import prj5.CompareHobby;
-import prj5.CompareMajor;
-import prj5.CompareState;
-import prj5.FileReader;
-
-public class Song 
+public class Song
 {
     private String artist;
     private String songTitle;
@@ -14,10 +9,7 @@ public class Song
     private int numHobby;
     private int numMajor;
     private int numRegion;
-    private CompareHobby compareHobby;
-    private CompareMajor compareMajor;
-    private CompareState compareState;
-    private FileReader reader;
+    
     
     public Song(String a, String st, int ry, String g)
     {
@@ -38,4 +30,6 @@ public class Song
     public String getGenre() {
         return genre;
     }
+    
+    
 }
