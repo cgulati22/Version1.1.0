@@ -8,22 +8,42 @@ public class Glyph
     private int[] leftPercentages;
     private Song song;
     private Student[] student;
+    int numStudents;
     private Position position;
+    private fileReader reader;
     
     public Glyph(Position pos, Song song)
     {
+        rightPercentages = new int[reader.getYes().length];
+        reader = new FileReader();
         this.position = pos;
         this.song = song;
     }
     
     public int[] getRightPercentages()
     {
+        
+        for (int i = 0; i < rightPercentages.length; i++)
+        {
+            int likes = reader.getYes()[i];
+            int dislikes = reader.getNo()[i];
+            int total = likes + dislikes;
+            rightPercentages[i] = (likes/total);
+        }
+        
+        
         return rightPercentages;
     }
     
     public int[] getLeftPercentages()
     {
-        return leftPercentages;
+        for (int i = 0; i < rightPercentages.length; i++)
+        {
+            int likes = reader.getYes()[i];
+            int dislikes = reader.getNo()[i];
+            int total = likes + dislikes;
+            rightPercentages[i] = (total / numStudents);
+        }
     }
     
     public Song getSong()
@@ -34,28 +54,6 @@ public class Glyph
     public Position getPosition()
     {
         return position;
-    }
-    
-    private int[] calculateRight()
-    {
-        int[] right;
-        return null;
-    }
-    
-    private int[] calculateLeft()
-    {
-        int[] left;
-        return null;
-    }
-    
-    private Shape constructVertBar()
-    {
-        return null;
-    }
-    
-    public Shape constructGlyph()
-    {
-        return null;
     }
 }
     
