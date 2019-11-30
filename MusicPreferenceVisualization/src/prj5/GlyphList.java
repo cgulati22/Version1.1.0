@@ -5,38 +5,38 @@ public class GlyphList {
     private Song[] songs;
     
     public GlyphList(Song[] songs) {
-        for(int i = 0 ;i < s.length; i++) {
-            glyphList = new Glyph[s.length];
-            songs =s;
+        for(int i = 0 ;i < songs.length; i++) {
+            glyphList = new Glyph[songs.length];
+            this.songs =songs;
             // TOP_LEFT, TOP_MIDDLE, TOP_RIGHT, MIDDLE_LEFT, MIDDLE_MIDDLE, MIDDLE_RIGHT, 
             //BOTTOM_LEFT, BOTTOM_MIDDLE, BOTTOM_RIGHT
             switch(i%9) {
                 case 0:
-                    glyphList[i] = new Glyph(Position.TOP_LEFT, s[i]);
+                    glyphList[i] = new Glyph(Position.TOP_LEFT, this.songs[i]);
                     break;
                 case 1:
-                    glyphList[i] = new Glyph(Position.TOP_MIDDLE, s[i]);
+                    glyphList[i] = new Glyph(Position.TOP_MIDDLE, this.songs[i]);
                     break;
                 case 2:
-                    glyphList[i] = new Glyph(Position.TOP_RIGHT, s[i]);
+                    glyphList[i] = new Glyph(Position.TOP_RIGHT, this.songs[i]);
                     break;
                 case 3:
-                    glyphList[i] = new Glyph(Position.MIDDLE_LEFT, s[i]);
+                    glyphList[i] = new Glyph(Position.MIDDLE_LEFT, this.songs[i]);
                     break;
                 case 4:
-                    glyphList[i] = new Glyph(Position.MIDDLE_MIDDLE, s[i]);
+                    glyphList[i] = new Glyph(Position.MIDDLE_MIDDLE, this.songs[i]);
                     break;
                 case 5:
-                    glyphList[i] = new Glyph(Position.MIDDLE_RIGHT, s[i]);
+                    glyphList[i] = new Glyph(Position.MIDDLE_RIGHT, this.songs[i]);
                     break;
                 case 6:
-                    glyphList[i] = new Glyph(Position.BOTTOM_LEFT, s[i]);
+                    glyphList[i] = new Glyph(Position.BOTTOM_LEFT, this.songs[i]);
                     break;
                 case 7:
-                    glyphList[i] = new Glyph(Position.BOTTOM_MIDDLE, s[i]);
+                    glyphList[i] = new Glyph(Position.BOTTOM_MIDDLE, this.songs[i]);
                     break;
                 case 8:
-                    glyphList[i] = new Glyph(Position.BOTTOM_RIGHT, s[i]);
+                    glyphList[i] = new Glyph(Position.BOTTOM_RIGHT, this.songs[i]);
                     break;
                 default:
                     break;

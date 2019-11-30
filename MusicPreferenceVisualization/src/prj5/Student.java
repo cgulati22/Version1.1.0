@@ -2,7 +2,6 @@ package prj5;
 
 public class Student 
 {
-    private String[] attributes = new String[3];
     private Major major;
     private Hobby hobby;
     private State state;
@@ -16,9 +15,6 @@ public class Student
         this.major = m;
         this.hobby = h;
         this.state = s;
-        attributes[0] = major.toString();
-        attributes[1] = hobby.toString();
-        attributes[2] = state.toString();
     }
     
     public Major getMajor()
@@ -36,8 +32,86 @@ public class Student
         return state;
     }
     
-    public String[] getAttributes()
+    public String toString()
     {
-        return attributes;
+        String major;
+        String hobby;
+        String state;
+        
+        if (this.major == Major.COMPUTER_SCIENCE)
+        {
+            major = "Computer Science";
+        }
+        else if (this.major == Major.MATH_OR_CMDA)
+        {
+            major = "Math or CMDA";
+        }
+        else if (this.major == Major.OTHER)
+        {
+            major = "Other";
+        }
+        else if (this.major == Major.OTHER_ENGINEERING)
+        {
+            major = "Other Engineering";
+        }
+        else
+        {
+            major = " ";
+        }
+        
+        if (this.state == State.NORTHEAST_US)
+        {
+            state = "NorthEast US";
+        }
+        else if (this.state == State.OUTSIDE_US)
+        {
+            state = "Outside of US";
+        }
+        else if (this.state == State.REST_OF_US)
+        {
+            state = "Rest of the US";
+        }
+        else if (this.state == State.SOUTHEAST_US)
+        {
+            state = "SouthEast US";
+        }
+        else
+        {
+            state = " ";
+        }
+        
+        if(this.hobby == Hobby.ART)
+        {
+            hobby = "Art"; 
+        }
+        else if (this.hobby == Hobby.MUSIC)
+        {
+            hobby = "Music";
+        }
+        else if (this.hobby == Hobby.READ)
+        {
+            hobby = "Read";
+        }
+        else if (this.hobby == Hobby.SPORTS)
+        {
+            hobby = "Sports";
+        }
+        else
+        {
+            hobby = " ";
+        }
+        
+        StringBuilder builder = new StringBuilder();
+        
+        builder.append("[");
+        builder.append(hobby);
+        builder.append(", ");
+        builder.append(major);
+        builder.append(", ");
+        builder.append(state);
+        builder.append("]");
+        
+        return builder.toString();
+        
     }
 }
